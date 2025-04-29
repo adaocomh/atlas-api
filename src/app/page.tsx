@@ -4,13 +4,12 @@ import Header from "@/components/header";
 import SearchAndFilter from "./../components/searchAndFilter/searchFilter"
 import PaisCard from "../components/paisCard";
 
-export default function Home() {
+export default async function Home() {
   return (
     <>
     <Header/>
     <SearchAndFilter/>
     <PaisCard/>
-
     </>
   );
 }

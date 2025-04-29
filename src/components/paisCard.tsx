@@ -1,6 +1,6 @@
 import data from '../components/data/data.json'
 
-export default async function PaisCard(){
+export default function PaisCard(){
     return(
     <div className='grid grid-cols-4 gap-4 p-[40px]'>
         {data.map((pais: any) =>(
