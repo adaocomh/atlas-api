@@ -2,7 +2,7 @@ import data from '../../components/data/data.json'
 
 export default function PaisCard({name}: { name: string }){
     if(!name){return null}
-    const paisFiltrado = data.find((pais: any) => {
+    const paisFiltrado: any = data.find((pais: any) => {
         return pais.name.toLowerCase().includes(name.toLowerCase())
     })
     return(
@@ -28,7 +28,7 @@ export default function PaisCard({name}: { name: string }){
                     </div>
                     <div>
                         <ul className='flex flex-wrap'>
-                            <tr className='font-bold'>Fronteira com:</tr>
+                            <li className='font-bold'>Fronteira com:</li>
                             {paisFiltrado.borders.map((b: string) => {
                                 const paisFrontal = data.find((pais: any) => {
                                     return pais.alpha3Code === b
