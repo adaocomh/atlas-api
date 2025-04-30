@@ -6,17 +6,40 @@ export default function PaisCard({name}: { name: string }){
         return pais.name.toLowerCase().includes(name.toLowerCase())
     })
     return(
-    <div className='grid grid-cols-4 gap-4 p-[40px]'>
+    <div className='flex flex-col items-center justify-center h-[80vh]'>
         {paisFiltrado && (
-            <div key={paisFiltrado.name} className='bg-white shadow-md rounded-[5px]'>
-                <img src={paisFiltrado.flags.png} className='rounded-t-[5px] '></img>
-                <div>
-                    <ul className='p-[20px]'>
-                    <li className='p-[3px] font-black'>{paisFiltrado.name}</li>
-                    <li className='p-[3px] font-semibold'>População: <span className='font-thin'>{paisFiltrado.population}</span></li>
-                    <li className='p-[3px] font-semibold'>Região: <span className='font-thin'>{paisFiltrado.region}</span></li>
-                    <li className='p-[3px] font-semibold'>Capital: <span className='font-thin'>{paisFiltrado.capital}</span></li>
-                    </ul>
+            <div key={paisFiltrado.name} className='flex flex-row justify-center gap-[40px] w-[80vw] rounded-[5px]'>
+                <img src={paisFiltrado.flags.png} className='rounded-t-[5px] h-max'/>
+                <div className='flex flex-col'>
+                    <h1 className='px-[10px] font-black text-[24px]'>{paisFiltrado.name}</h1>
+                    <div className='flex '>
+                        <ul className='p-[10px]'>
+                        <li className='p-[3px] font-semibold'>Nome nativo: <span className='font-thin'>{paisFiltrado.nativeName}</span></li>
+                        <li className='p-[3px] font-semibold'>População: <span className='font-thin'>{paisFiltrado.population}</span></li>
+                        <li className='p-[3px] font-semibold'>Região: <span className='font-thin'>{paisFiltrado.region}</span></li>
+                        <li className='p-[3px] font-semibold'>Sub Regiao: <span className='font-thin'>{paisFiltrado.subregion}</span></li>
+                        <li className='p-[3px] font-semibold'>Capital: <span className='font-thin'>{paisFiltrado.capital}</span></li>
+                        </ul>
+                        <ul className='p-[10px]'>
+                        <li className='p-[3px] font-semibold'>Domínio de nível superior: <span className='font-thin'>{paisFiltrado.topLevelDomain}</span></li>
+                        <li className='p-[3px] font-semibold'>Moeda: <span className='font-thin'>{paisFiltrado.currencies[0].code}</span></li>
+                        <li className='p-[3px] font-semibold'>Linguagem: <span className='font-thin'>{paisFiltrado.languages[0].nativeName}</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul className='flex flex-wrap'>
+                            <tr className='font-bold'>Fronteira com:</tr>
+                            {paisFiltrado.borders.map((b: string) => {
+                                const paisFrontal = data.find((pais: any) => {
+                                    return pais.alpha3Code === b
+                                })
+                                return (
+                                    <li key={paisFrontal?.name} className='flex items-center p-[3px] font-light border border-gray-300 w-max m-[5px] rounded-[5px] text-[12px] px-[15px]'>{paisFrontal?.name}</li>
+                                )
+                            })}
+                            </ul>
+                    </div>
+    
                 </div>
             </div>)}
     </div>

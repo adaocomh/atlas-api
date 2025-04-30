@@ -10,6 +10,7 @@ export default function Filtro(){
             <p>{regioes ? '⌃' : '⌄'}</p>
         </div>
         <ul className={`${regioes ? "block" : "hidden"} absolute top-[70px] bg-white p-[10px] rounded-[5px] shadow-md/15 w-[250px] text-gray-500 font-light`}>
+            <li className="p-[8px] hover:text-shadow-lg">Todas as regiões</li>
             <li className="p-[8px] hover:text-shadow-lg">America</li>
             <li className="p-[8px] hover:text-shadow-lg">Ásia</li>
             <li className="p-[8px] hover:text-shadow-lg">Europa</li>
