@@ -7,15 +7,15 @@ export default function PaisCard({name}: { name: string }){
         return pais.name.toLowerCase().includes(name.toLowerCase())
     })
     return(
-    <div className='flex flex-col gap-[40px] h-[80vh] justify-center'>
-        <Link href={'/'} className='mx-[80px]'>↩︎ Voltar</Link> 
+    <div className='flex flex-col h-[100vh] gap-[40px] justify-center text-[16px]'>
+        <Link href={'/'} className='mx-[13vw]'>↩︎ Voltar</Link> 
         <div className='flex flex-col items-center  justify-center'>
             {paisFiltrado && (
-                <div key={paisFiltrado.name} className='flex flex-row justify-center gap-[40px] w-[80vw] rounded-[5px]'>
-                    <img src={paisFiltrado.flags.png} className='rounded-t-[5px] h-max'/>
+                <div key={paisFiltrado.name} className='flex flex-col  md:flex-row justify-center md:items-center gap-[40px] w-[90vw] rounded-[5px]'>
+                    <img src={paisFiltrado.flags.png} className='rounded-[5px] h-[50%] sm:h-[100%]'/>
                     <div className='flex flex-col'>
                         <h1 className='px-[10px] font-black text-[24px]'>{paisFiltrado.name}</h1>
-                        <div className='flex '>
+                        <div className='flex flex-col sm:flex-row'>
                             <ul className='p-[10px]'>
                             <li className='p-[3px] font-semibold'>Nome nativo: <span className='font-thin'>{paisFiltrado.nativeName}</span></li>
                             <li className='p-[3px] font-semibold'>População: <span className='font-thin'>{paisFiltrado.population}</span></li>
@@ -29,15 +29,15 @@ export default function PaisCard({name}: { name: string }){
                             <li className='p-[3px] font-semibold'>Linguagem: <span className='font-thin'>{paisFiltrado.languages[0].nativeName}</span></li>
                             </ul>
                         </div>
-                        <div>
-                            <ul className='flex flex-wrap'>
-                                <li className='font-bold'>Fronteira com:</li>
+                        <div className='flex flex-col lg:flex-row'>
+                            <h3 className='p-[10px] font-semibold'>Fronteira com:</h3>
+                            <ul className='flex flex-wrap p-[10px]'>
                                 {paisFiltrado.borders.map((b: string) => {
                                     const paisFrontal = data.find((pais: any) => {
                                         return pais.alpha3Code === b
                                     })
                                     return (
-                                        <li key={paisFrontal?.name} className='flex items-center p-[3px] font-light border border-gray-300 w-max m-[5px] rounded-[5px] text-[12px] px-[15px]'>{paisFrontal?.name}</li>
+                                        <li key={paisFrontal?.name} className='flex items-center p-[3px] font-light border border-gray-300 w-max m-[3px] rounded-[5px] text-[12px] px-[10px]'>{paisFrontal?.name}</li>
                                     )
                                 })}
                                 </ul>
