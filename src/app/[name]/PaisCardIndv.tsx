@@ -32,14 +32,15 @@ export default function PaisCard({name}: { name: string }){
                         <div className='flex flex-col lg:flex-row'>
                             <h3 className='p-[10px] font-semibold'>Fronteira com:</h3>
                             <ul className='flex flex-wrap p-[10px]'>
-                                {paisFiltrado.borders.map((b: string) => {
+                                {paisFiltrado.borders ? paisFiltrado.borders.map((b: string) => {
                                     const paisFrontal = data.find((pais: any) => {
                                         return pais.alpha3Code === b
                                     })
                                     return (
-                                        <li key={paisFrontal?.name} className='flex items-center p-[3px] font-light border border-gray-300 w-max m-[3px] rounded-[5px] text-[12px] px-[10px]'>{paisFrontal?.name}</li>
+                                        <Link key={paisFrontal?.name} href={`/${paisFrontal?.name}`}>
+                                        <li className='flex items-center p-[3px] font-light border border-gray-300 w-max m-[3px] rounded-[5px] text-[12px] px-[10px]'>{paisFrontal?.name}</li></Link>
                                     )
-                                })}
+                                }) : <li className='flex items-center p-[3px] font-light border border-gray-300 w-max m-[3px] rounded-[5px] text-[12px] px-[10px]'>Não faz fronteira com nenhum outro pais.</li> }
                                 </ul>
                         </div>
                     </div>
