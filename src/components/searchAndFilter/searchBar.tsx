@@ -14,7 +14,7 @@ export default function SearchBar() {
     }
     return(
         <form onSubmit={handleSubmit} className="">
-            <input className="w-[80vw] shadow-md/15 border-gray-300 rounded-[5px] p-[10px] sm:w-[300px]" type="text" placeholder="🔎 Search for a contry" name="name" value={input} onChange={(e) => setInput(e.target.value)}/>
+            <input className="w-[80vw] dark:bg-[var(--cards)] dark:shadow-black shadow-md border-gray-300 rounded-[5px] p-[10px] sm:w-[300px]" type="text" placeholder="🔎 Search for a contry" name="name" value={input} onChange={(e) => setInput(e.target.value)}/>
 
         <button type="submit"></button>
         </form>
