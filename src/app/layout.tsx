@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../styles/globals.css";
-import { Providers } from './provider'
+import { ThemeProvider } from "./provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,10 +25,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt-BR">
-      <Providers>
-      <body>{children}</body>
-      </Providers>
+    <html lang="pt-BR" suppressHydrationWarning>
+      <body cz-shortcut-listen="true">
+          <ThemeProvider attribute="class" defaultTheme="light">
+            {children}
+          </ThemeProvider>
+        </body>
     </html>
   )
 }
