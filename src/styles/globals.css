@@ -6,13 +6,13 @@
 
 :root {
   --font
-  : sans-serif;
+  :"Nunito Sans", sans-serif;
   --radius
   : 0.625rem;
   --background
-  : oklch(1 0 0);
+  : #ece1d9;
   --foreground
-  : oklch(0.145 0 0);
+  : #594834;
   --card
   : oklch(1 0 0);
   --card-foreground
@@ -78,7 +78,6 @@
   --foreground
   : oklch(0.985 0 0);
   --cards: #121212;
-  --shadow-box: black;
   --card
   : oklch(0.205 0 0);
   --card-foreground

@@ -5,7 +5,8 @@ import RegiaoFilter from '../components/searchAndFilter/page'
 import '../styles/globals.css'
 
 export default function Home() {
-  return (<>
+  return (
+    <>
     <Header/>
     <RegiaoFilter/>
     </>

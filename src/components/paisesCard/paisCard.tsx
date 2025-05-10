@@ -12,7 +12,7 @@ export default function PaisCard({ region }: { region: string }) {
         <div className=' flex flex-col items-center sm:grid grid-cols-4 gap-4 p-[40px] text-[14px]'>
             {paisFiltrado.map((pais: any) => (
                 <Link key={pais.name} href={`/${pais.name}`}>
-                <div className='dark:bg-[var(--cards)] dark:shadow-black shadow-md rounded-[5px]'>
+                <div className='dark:bg-[var(--cards)] dark:shadow-black hover:shadow-lg hover:translate-y-[-1px] bg-[#ece6e1] shadow-md rounded-[5px]'>
                     <img src={pais.flags.png} className='rounded-t-[5px] w-[100%]'/>
                     <div>
                         <ul className='p-[20px]'>
