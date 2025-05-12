@@ -11,7 +11,7 @@ export default function PaisCard({name}: { name: string }){
     <div className='flex flex-col'>
         <Header/>
         <div className='flex flex-col h-[80vh] gap-[40px] justify-center text-[16px] dark:text-[#BFB2A3] '>
-            <Link href={'/'} className='dark:text-shadow-[0px_10px_5px_rgba(0,0,0,1)] hover:translate-y-[-1px] mx-[13vw] w-max'>↩︎ Voltar</Link>
+            <Link href={'/'} className='absolute top-[20vh] left-[0vw] dark:text-shadow-[0px_10px_5px_rgba(0,0,0,1)] hover:translate-y-[-1px] mx-[13vw] w-max'>↩︎ Voltar</Link>
             <div className='flex flex-col items-center  justify-center'>
                 {paisFiltrado && (
                     <div key={paisFiltrado.name} className='flex flex-col  justify-center md:flex-row  md:items-center gap-[40px] w-[90vw] rounded-[5px]'>

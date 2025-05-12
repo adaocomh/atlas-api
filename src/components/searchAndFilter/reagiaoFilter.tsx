@@ -23,7 +23,7 @@ export default function Filtro({ onRegiaoClick } : { onRegiaoClick: (regiao: str
     return(
         <div className="flex flex-col relative">
         <div className="flex justify-between dark:bg-[var(--cards)] dark:text-[#BFB2A3] dark:shadow-black hover:translate-y-[-1px] bg-[#ece6e1] rounded-[5px] hover:shadow-lg shadow-md p-[15px] w-[250px]  text-gray-500 font-light" onClick={() => setRegioesLi(!regioesLi)}>
-            <p>Filtrar Por região</p>
+            <p>{regioes ? regioes : "Filtrar Por região"}</p>
             <p>{regioesLi ? '⌃' : '⌄'}</p>
         </div>
         <ul className={`${regioesLi ? "block" : "hidden"} absolute top-[70px] dark:bg-[var(--cards)] bg-[#ece6e1] p-[10px] rounded-[5px] shadow-md/15 w-[250px] dark:text-[#BFB2A3] text-gray-500 font-light`}>
