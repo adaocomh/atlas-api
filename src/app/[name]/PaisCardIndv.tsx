@@ -11,7 +11,7 @@ export default function PaisCard({name}: { name: string }){
     <div className='flex flex-col'>
         <Header/>
         <div className='flex flex-col h-[80vh] gap-[40px] justify-center text-[16px] dark:text-[#BFB2A3] '>
-            <Link href={'/'} className='absolute top-[20vh] left-[0vw] dark:text-shadow-[0px_10px_5px_rgba(0,0,0,1)] hover:translate-y-[-1px] mx-[13vw] w-max'>↩︎ Voltar</Link>
+            <Link href={'/'} className='absolute top-[20vh] left-[0vw] dark:text-shadow-[0px_10px_5px_rgba(0,0,0,1)] hover:translate-y-[-1px] transition-all duration-150 mx-[13vw] w-max'>↩︎ Voltar</Link>
             <div className='flex flex-col items-center  justify-center'>
                 {paisFiltrado && (
                     <div key={paisFiltrado.name} className='flex flex-col  justify-center md:flex-row  md:items-center gap-[40px] w-[90vw] rounded-[5px]'>
@@ -41,9 +41,9 @@ export default function PaisCard({name}: { name: string }){
                                         })
                                         return (
                                             <Link key={paisFrontal?.name} href={`/${paisFrontal?.name}`}>
-                                            <li className='flex items-center dark:border-[#BFB2A3] hover:translate-y-[-1px]  p-[3px] w-max m-[3px] font-light border-[1px]  border-[#594834] rounded-[5px] text-[12px] px-[10px]'>{paisFrontal?.name}</li></Link>
+                                            <li className='flex items-center dark:border-[#BFB2A3] hover:translate-y-[-1px] transition-all duration-150 p-[3px] w-max m-[3px] font-light border-[1px]  border-[#594834] rounded-[5px] text-[12px] px-[10px]'>{paisFrontal?.name}</li></Link>
                                         )
-                                    }) : <Link href={`/`}><li className='flex items-center  dark:broder-[#BFB2A3] hover:translate-y-[-1px] w-max p-[3px] px-[10px] m-[3px] text-[12px] font-light border border-[#594834] rounded-[5px]'>Não faz fronteira com nenhum outro pais.</li></Link> }
+                                    }) : <Link href={`/`}><li className='flex items-center  dark:broder-[#BFB2A3] hover:translate-y-[-1px] transition-all duration-150 w-max p-[3px] px-[10px] m-[3px] text-[12px] font-light border border-[#594834] rounded-[5px]'>Fronteira com nenhum pais.</li></Link>}
                                     </ul>
                             </div>
                         </div>

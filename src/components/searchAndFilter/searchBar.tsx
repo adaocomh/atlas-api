@@ -17,7 +17,7 @@ export default function SearchBar() {
     }
     return(
         <form onSubmit={handleSubmit} className="">
-            <input className="sm:w-[300px] dark:bg-[var(--cards)] dark:shadow-black hover:translate-y-[-1px] hover:shadow-lg w-[80vw] bg-[#ece6e1] shadow-md border-gray-300 rounded-[5px] p-[10px]" type="text" placeholder="🔎 Search for a contry" name="name" value={input} onChange={(e) => setInput(e.target.value)}/>
+            <input className="sm:w-[300px] dark:bg-[var(--cards)] dark:shadow-black hover:translate-y-[-1px] hover:shadow-lg transition-all duration-150 w-[80vw] bg-[#ece6e1] shadow-md border-gray-300 rounded-[5px] p-[10px]" type="text" placeholder="🔎 Search for a contry" name="name" value={input} onChange={(e) => setInput(e.target.value)}/>
 
         <button type="submit"></button>
         </form>
