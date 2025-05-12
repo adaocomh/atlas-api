@@ -1,4 +1,5 @@
 'use client'
+import data from "../data/data.json"
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
@@ -8,7 +9,9 @@ export default function SearchBar() {
     const router = useRouter()
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        if(input.trim()){
+        if(!data.some((pais) => pais.name.toLowerCase().includes(input.trim().toLowerCase()))){ 
+            return alert("Nome de pais inválido, certifique-se de que o nome do pais está correto")
+        }else{
             router.push(`/${input.trim()}`)
         }
     }
