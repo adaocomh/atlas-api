@@ -10,7 +10,7 @@ export default function SearchBar() {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         if(!data.some((pais) => pais.name.toLowerCase().includes(input.trim().toLowerCase()))){ 
-            return alert("Nome de pais inválido, certifique-se de que o nome do pais está correto.")
+            return alert("Nome de país inválido, certifique-se de que o nome do pais está correto.")
         }else{
             router.push(`/${input.trim()}`)
         }
