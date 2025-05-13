@@ -8,16 +8,16 @@ export default function PaisCard({name}: { name: string }){
         return pais.name.toLowerCase().includes(name.toLowerCase())
     })
     return(
-    <div className='flex flex-col h-max gap-[7vh]'>
+    <div className='flex flex-col gap-[7vh] h-max '>
         <Header/>
-        <div className='flex flex-col md:h-max gap-[40px] justify-center text-[16px] dark:text-[#BFB2A3] '>
-            <Link href={'/'} className='dark:text-shadow-[0px_10px_5px_rgba(0,0,0,1)] hover:translate-y-[-1px] hover:transition-all hover:duration-150 mx-[13vw] w-max'>↩︎ Voltar</Link>
-            <div className='flex flex-col items-center  justify-center'>
+        <div className='flex flex-col justify-center md:h-max gap-[40px] dark:text-[#BFB2A3] text-[16px]'>
+            <Link href={'/'} className='dark:text-shadow-[0px_10px_5px_rgba(0,0,0,1)] hover:translate-y-[-1px] hover:transition-all hover:duration-150 w-max mx-[13vw]'>↩︎ Voltar</Link>
+            <div className='flex flex-col justify-center items-center'>
                 {paisFiltrado && (
-                    <div key={paisFiltrado.name} className='flex flex-col  justify-center md:flex-row  md:items-center gap-[40px] w-[90vw] rounded-[5px]'>
-                        <img src={paisFiltrado.flags.png} className='md:h-max md:w-max dark:shadow-[0px_10px_10px_rgba(0,0,0,1)] shadow-[0px_10px_10px_rgba(0,0,0,0.2)] rounded-[5px] w-[100%]'/>
+                    <div key={paisFiltrado.name} className='flex flex-col justify-center md:flex-row  md:items-center gap-[40px] w-[90vw] rounded-[5px]'>
+                        <img src={paisFiltrado.flags.png} className='md:h-max md:w-max dark:shadow-[0px_10px_10px_rgba(0,0,0,1)] w-[100%] shadow-[0px_10px_10px_rgba(0,0,0,0.2)] rounded-[5px]'/>
                         <div className='flex flex-col'>
-                            <h1 className='dark:text-shadow-[0px_10px_5px_rgba(0,0,0,1)] text-shadow-lg/15 px-[10px] font-black text-[24px]'>{paisFiltrado.name}</h1>
+                            <h1 className='dark:text-shadow-[0px_10px_5px_rgba(0,0,0,1)] text-[24px] font-black text-shadow-lg/15 px-[10px]'>{paisFiltrado.name}</h1>
                             <div className='flex flex-col sm:flex-row'>
                                 <ul className='p-[10px]'>
                                 <li className='p-[3px] font-semibold'>Nome nativo: <span className='font-thin'>{paisFiltrado.nativeName}</span></li>
@@ -41,9 +41,9 @@ export default function PaisCard({name}: { name: string }){
                                         })
                                         return (
                                             <Link key={paisFrontal?.name} href={`/${paisFrontal?.name}`}>
-                                            <li className='flex items-center dark:border-[#BFB2A3] hover:translate-y-[-1px] hover:transition-all hover:duration-150 p-[3px] w-max m-[3px] font-light border-[1px]  border-[#594834] rounded-[5px] text-[12px] px-[10px]'>{paisFrontal?.name}</li></Link>
+                                            <li className='flex items-center dark:border-[#BFB2A3] hover:translate-y-[-1px] hover:transition-all hover:duration-150 w-max p-[3px_10px] m-[3px] text-[12px] font-light border-[1px]  border-[#594834] rounded-[5px]'>{paisFrontal?.name}</li></Link>
                                         )
-                                    }) : <Link href={`/`}><li className='flex items-center  dark:broder-[#BFB2A3] hover:translate-y-[-1px] hover:transition-all hover:duration-150 w-max p-[3px] px-[10px] m-[3px] text-[12px] font-light border border-[#594834] rounded-[5px]'>Fronteira com nenhum pais.</li></Link>}
+                                    }) : <Link href={`/`}><li className='flex items-center dark:broder-[#BFB2A3] hover:translate-y-[-1px] hover:transition-all hover:duration-150 w-max p-[3px_10px] m-[3px] text-[12px] font-light border-[1px] border-[#594834] rounded-[5px]'>Fronteira com nenhum pais.</li></Link>}
                                     </ul>
                             </div>
                         </div>
