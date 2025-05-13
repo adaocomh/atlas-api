@@ -16,10 +16,9 @@ export default function SearchBar() {
         }
     }
     return(
-        <form onSubmit={handleSubmit} className="">
-            <input className="sm:w-[300px] dark:bg-[var(--cards)] dark:shadow-black hover:translate-y-[-1px] hover:shadow-lg hover:transition-all hover:duration-150 w-[80vw] bg-[#ece6e1] p-[10px] shadow-md border-gray-300 rounded-[5px]" type="text" placeholder="🔎 Search for a contry" name="name" value={input} onChange={(e) => setInput(e.target.value)}/>
-
-        <button type="submit"></button>
+        <form onSubmit={handleSubmit}>
+            <input className="sm:w-[300px] dark:bg-[var(--cards)] dark:shadow-black hover:translate-y-[-1px] hover:shadow-lg hover:transition-all hover:duration-150 w-[80vw] bg-[#ece6e1] p-[10px] shadow-md border-gray-300 rounded-[5px]" type="text" placeholder="🔎 Procure por um pais" name="name" value={input} onChange={(e) => setInput(e.target.value)}/>
+            <button type="submit"></button>
         </form>
     )
 }

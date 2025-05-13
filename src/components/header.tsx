@@ -15,7 +15,7 @@ export default function Header(){
         <header>
             <div className="flex justify-between items-center dark:bg-[var(--cards)]  dark:border-none dark:shadow-[0px_10px_10px_rgba(0,0,0,1)] h-[80px] bg-[#ece6e1] p-[40px] text-[16px] border-b-[1px] border-[#D9D9D9] shadow-md">
                 <Link href={'/'}>
-                <h1 className="md:text-[22px] dark:text-[#BFB2A3] hover:translate-y-[-1px] hover:transition-all hover:duration-150 hover:text-shadow-lg text-[20px] text-[#594834] text-shadow-md">Onde no mundo?</h1></Link>
+                <h1 className="md:text-[22px] dark:text-[#BFB2A3] hover:translate-y-[-1px] hover:transition-all hover:duration-150 hover:text-shadow-lg text-[20px] text-[#594834] text-shadow-md">Qual lugar do mundo?</h1></Link>
                 <button onClick={() => setTheme(theme ==='light' ? 'dark' : 'light')} className="md:text-[20px] dark:text-[#BFB2A3] hover:translate-y-[-1px] hover:transition-all hover:duration-150 hover:text-shadow-lg w-max h-max text-[14px] font-light text-[#594834] text-shadow-md cursor-pointer">{theme === 'dark' ? (
                     <div className="flex items-center gap-[10px]">
                     <Image src="/icons/night-mode_bege.png" alt="" width={30} height={20} className="md:w-[30px] md:h-[20] w-[20px] h-[10]"/>Light Mode
