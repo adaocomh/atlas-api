@@ -11,7 +11,7 @@ export default function PaisCard({name}: { name: string }){
     <div className='flex flex-col gap-[7vh] h-max '>
         <Header/>
         <div className='flex flex-col justify-center md:h-max gap-[40px] dark:text-[#BFB2A3] text-[16px]'>
-            <Link href={'/'} className='dark:text-shadow-[0px_10px_5px_rgba(0,0,0,1)] hover:translate-y-[-1px] hover:transition-all hover:duration-150 w-max mx-[13vw]'>↩︎ Voltar</Link>
+            <Link href={'/'} className='dark:text-shadow-[0px_5px_5px_rgba(0,0,0,1)] dark:hover:text-shadow-[0px_10px_5px_rgba(0,0,0,1)] hover:translate-y-[-1px] hover:transition-all hover:duration-150 hover:text-shadow-lg w-max mx-[13vw] text-shadow-md'>↩︎ Voltar</Link>
             <div className='flex flex-col justify-center items-center'>
                 {paisFiltrado && (
                     <div key={paisFiltrado.name} className='flex flex-col justify-center md:flex-row  md:items-center gap-[40px] w-[90vw] rounded-[5px]'>
@@ -41,9 +41,9 @@ export default function PaisCard({name}: { name: string }){
                                         })
                                         return (
                                             <Link key={paisFrontal?.name} href={`/${paisFrontal?.name}`}>
-                                            <li className='flex items-center dark:border-[#BFB2A3] hover:translate-y-[-1px] hover:transition-all hover:duration-150 w-max p-[3px_10px] m-[3px] text-[12px] font-light border-[1px]  border-[#594834] rounded-[5px]'>{paisFrontal?.name}</li></Link>
+                                            <li className='flex items-center dark:border-[#BFB2A3] dark:shadow-[0px_5px_5px_rgba(0,0,0,1)] dark:hover:shadow-[0px_10px_5px_rgba(0,0,0,1)] hover:translate-y-[-1px] hover:transition-all hover:duration-150 hover:shadow-lg w-max p-[3px_10px] m-[3px] text-[12px] font-light border-[1px] border-[#594834] rounded-[5px] shadow-md'>{paisFrontal?.name}</li></Link>
                                         )
-                                    }) : <Link href={`/`}><li className='flex items-center dark:broder-[#BFB2A3] hover:translate-y-[-1px] hover:transition-all hover:duration-150 w-max p-[3px_10px] m-[3px] text-[12px] font-light border-[1px] border-[#594834] rounded-[5px]'>Fronteira com nenhum pais.</li></Link>}
+                                    }) : <Link href={`/`}><li className='flex items-center dark:broder-[#BFB2A3] dark:shadow-[0px_5px_5px_rgba(0,0,0,1)] dark:hover:shadow-[0px_10px_5px_rgba(0,0,0,1)] hover:translate-y-[-1px] hover:transition-all hover:duration-150 hover:shadow-lg w-max p-[3px_10px] m-[3px] text-[12px] font-light border-[1px] border-[#594834] rounded-[5px] shadow-md'>Fronteira com nenhum pais.</li></Link>}
                                     </ul>
                             </div>
                         </div>
