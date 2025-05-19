@@ -1,6 +1,12 @@
 import PaisCard from "./PaisCardIndv"
 
-export default function NomeFiltrado({params}: {params: {name: string}}) {
+interface NomeFiltradoProps{
+    params: {
+        name: string
+    }
+}
+
+export default async function NomeFiltrado({params}: NomeFiltradoProps) {
     const decodeName = decodeURIComponent(params.name)
     return(
         <div>
