@@ -22,7 +22,7 @@ Este projeto consome a [REST Countries API](https://restcountries.com) e exibe i
 ## 🚀 Deploy
 
 Você pode visualizar o projeto online em:  
-➡️ [https://adaocomh.github.io/atlas-api](https://adaocomh.github.io/atlas-api)
+➡️ [https://atlas-api-drab.vercel.app](https://atlas-api-drab.vercel.app)
 
 ## 📁 Recursos adicionais
 
