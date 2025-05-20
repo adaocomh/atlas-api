@@ -18,11 +18,11 @@ export default function Header(){
                 <h1 className="md:text-[22px] dark:text-[#BFB2A3] dark:text-shadow-[0px_5px_5px_rgba(0,0,0,1)] dark:hover:text-shadow-[0px_10px_5px_rgba(0,0,0,1)] hover:translate-y-[-1px] hover:transition-all hover:duration-150 hover:text-shadow-lg text-[20px] text-[#594834] text-shadow-md">Qual lugar do mundo?</h1></Link>
                 <button onClick={() => setTheme(theme ==='light' ? 'dark' : 'light')} className="md:text-[20px] dark:text-[#BFB2A3] hover:translate-y-[-1px] hover:transition-all hover:duration-150 hover:text-shadow-lg w-max h-max text-[14px] font-light text-[#594834] text-shadow-md cursor-pointer">{theme === 'dark' ? (
                     <div className="flex items-center gap-[10px]">
-                    <Image src="/icons/night-mode_bege.png" alt="" width={30} height={20} className="md:w-[30px] md:h-[20] dark:text-shadow-[0px_5px_5px_rgba(0,0,0,1)] dark:hover:text-shadow-[0px_10px_5px_rgba(0,0,0,1)] w-[20px] h-[10]"/>Light Mode
+                    <Image src="/icons/night-mode_bege.png" alt="" width={30} height={0} className="md:w-[30px] md:h-[20] dark:text-shadow-[0px_5px_5px_rgba(0,0,0,1)] dark:hover:text-shadow-[0px_10px_5px_rgba(0,0,0,1)] w-[20px] h-[10]"/>Light Mode
                     </div>
                     ) : (
                     <div className="flex items-center gap-[10px]">
-                    <Image src="/icons/light-mode_brown.png" alt="" width={30} height={20} className="md:w-[30px] md:h-[20] hover:text-shadow-lg w-[20px] h-[10] text-shadow-md"/>Dark mode
+                    <Image src="/icons/light-mode_brown.png" alt="" width={30} height={0} className="md:w-[30px] md:h-[20] hover:text-shadow-lg w-[20px] h-[10] text-shadow-md"/>Dark mode
                     </div>
                     )}</button>
             </div>
